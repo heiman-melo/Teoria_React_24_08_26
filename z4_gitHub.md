@@ -1,0 +1,3 @@
+- 1. estando en mi usuario de gitHub new > agrego el nombre> descripcion ,  public > Create repository
+- 2. ya teniendo en mi local la carpeta creada y la consola abierte copio y pego todo el comando que me da 
+- 3. vuelvo y copio todo el otro comando y listo proyecto cargado

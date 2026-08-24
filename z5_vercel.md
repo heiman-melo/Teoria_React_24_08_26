@@ -1,0 +1,3 @@
+- 1. simplemente clic lado izquierdo arriba en mi usuario 
+- 2. clic arriba lado derecho add new > proyect > mi proyecto de gitHub y ya hacer deploy 
+- 3. tomar la url y empezar a hacer con el proyecto lo que desee

@@ -1,122 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// aqui sera el primer componenete de react que se renderizara en la aplicacion
+import { Box } from '@mui/material';
+import { BrowserRouter } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+    <BrowserRouter>
+      <Box sx={{ display: 'flex' }}>
+        <Navigation />
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 3,
+            width: { md: `calc(100% - 280px)` },
+            mt: '64px',
+          }}
         >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+          <AppRoutes />
+        </Box>
+      </Box>
+    </BrowserRouter>
+  );
 }
 
 export default App
+
+
+// ejemplo de un router sencillo dentro del componente principal de react
+// import React from 'react';
+// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+// import { Box, Button, Typography } from '@mui/material';
+
+// // 1. Vistas simuladas
+// function Home() {
+//   return <Typography variant="h4">Estás en la vista de Inicio (Home)</Typography>;
+// }
+
+// function Main() {
+//   return <Typography variant="h4">Estás en la vista Principal (Main)</Typography>;
+// }
+
+// export default function App() {
+//   return (
+//     <BrowserRouter>
+//       <Box sx={{ p: 4 }}>
+        
+//         {/* BARRA DE NAVEGACIÓN (Principal) (Simulada aquí directamente con botones y Links) */}
+//         <Box sx={{ display: 'flex', gap: 2, mb: 4 }}>
+//           {/* Usamos el componente Link de react-router-dom integrado en un botón de MUI */}
+//           <Button component={Link} to="/" variant="contained">
+//             Ir a Home
+//           </Button>
+//           <Button component={Link} to="/main" variant="contained" color="secondary">
+//             Ir a Main
+//           </Button>
+//         </Box>
+
+//         {/* CONTENEDOR DE RUTAS (rutas de la navegacion principal) (Lo que antes tenías en AppRoutes) */}
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/main" element={<Main />} />
+//         </Routes>
+
+//       </Box>
+//     </BrowserRouter>
+//   );
+// }

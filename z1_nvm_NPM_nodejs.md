@@ -5,7 +5,7 @@
 ---
 
 ## 1. ¿Qué es NVM y por qué usarlo?
-NVM aísla los entornos de Node.js en tu computadora. Esto significa que **no necesitas tener Node instalado previamente** de forma global; NVM se encarga de descargar y administrar las versiones de manera independiente. Si un proyecto antiguo requiere Node 18 y tu proyecto actual usa Node 20, podrás cambiar de versión en la terminal de Windows con un solo comando.
+NVM aísla los entornos de Node.js en tu computadora. Esto significa que **no necesitas tener Node instalado previamente** de forma global; NVM se encarga de descargar y administrar las versiones de manera independiente. Si un proyecto antiguo requiere Node 18 y tu proyecto actual usa Node 20, podrás cambiar de versión en la terminal de Windows con un solo comando puedo tener diferentes versiones para diferentes proyectos.
 
 ---
 
@@ -16,36 +16,40 @@ En Windows se utiliza la versión oficial mantenida por la comunidad llamada **n
 2. Busca la sección de descargas de la última versión y descarga el archivo comprimido llamado **`nvm-setup.zip`**.
 3. Descomprímelo y ejecuta el archivo asistente **`nvm-setup.exe`**. Sigue los pasos indicados en la pantalla para completar la instalación.
 
-> **Nota importante:** Una vez instalado, abre una nueva terminal (PowerShell o Símbolo del sistema) para asegurarte de que los comandos de NVM estén disponibles en tus variables de entorno.
+> **Nota importante:** Una vez instalado, abre una nueva terminal (PowerShell o Símbolo del sistema) o cualquier 
+consola para asegurarte de que los comandos de NVM estén disponibles en tus variables de entorno.
 
 ---
 
 ## Como usar nvm ---------------------------------------------------------------------------------------------------------------------------------
 
 ## 1. Este comando le dice a NVM: "Busca la versión estable más reciente de Node.js y descárgala esto ya viene con npm
-nvm install lts // si pasa tiempo y quiero crear un nuevo proyeto para traerme la ultima version de nodejs uso este comando
-nvm use lts   use esa version instalada
+nvm install lts // (instalación y actualización) si pasa tiempo y quiero crear un nuevo proyeto para traerme la ultima version de nodejs uso este comando
+
+nvm use lts   use esa version mas actual instalada si la mas reciente no esta instalada puede dar un error este comando
 
 ## 2. otra version para un proyecto especifico
-nvm install 18.16.0
-nvm use 18.16.0
+nvm install 18.16.0   instalacion de version especifica
+nvm use 18.16.0       uso de esa version especifica
 
 ## 3. Verificar que NVM está instalado correctamente
-nvm --version  // 1.2.2 esta es la version del proyecto nvm que se instalo desde la web versiones mas nuevas me pueden ayudar a instalar nuevas funcionalidades esto desde la web
+-nvm --version  // 1.2.2 esta es la version del proyecto nvm que se instalo desde la web versiones mas nuevas me pueden ayudar a instalar nuevas funcionalidades esto desde la web
+-si la quiero actualizar simplemente descargo NVM nuevamente y al instalarla el solo actualiza lo que deba actualizar 
+ya que ya esta instalada 
 
 ## 4. De forma global para toda la pc
 nvm use 18.16.0  // al parecer las dos funcionan igual porque no me tomo versiones diferentes en proyetos diferentes
-nvm alias default 18.16.0   // de esta forma le digo a nvm que version de nodejs quiero usar en el proyecto actual para correrlo y que no falle
+nvm alias default 18.16.0  comando configuracion global no local de esta forma le digo a nvm que version de nodejs quiero usar
 nvm list // me indica que versiones de (nodejs) tengo en el proyecto
 
-## 5. Comprobar la versión de Node activa actualmente
-npm --version o npm -v
+## 5. Comprobar la versión de Node activa actualmente 
+npm --version o npm -v me dara la actual del proyecto si es una consola global pues me dara la global
 
 ## 6. saber que versiones hay disponibles para descargar en internet
 nvm list available // me muestra todas las versiones de nodejs disponibles
 
 ## 7. saber la version de nodejs
-node --version  o node -v
+node --version  o node -v   me mostrara la local si es sobre un proyecto o la global si es la consola global
 
 ## 8. NPM + nodejs al tener nvm  
 NPM se instala de una vez junto con la instalacion de nodejs desde nvm esata es una herramienta que me ayuda a instalar las librerias quye necesita un proyecto

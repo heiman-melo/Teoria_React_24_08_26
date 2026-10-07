@@ -6,4 +6,5 @@
 "scripts": {
     "dev": "vite",  // para correrlo (npm run dev) 
     "start": "vite --open",  // para correrlo con npm start
+    "heiman": "vite --open", // para correrlo con npm heiman
   },

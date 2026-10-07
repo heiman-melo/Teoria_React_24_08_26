@@ -13,7 +13,7 @@ git config --global user.email "tu-correo-global@ejemplo.com"
      auque el email si se usa para agregar el avatar con respecto a tu correo corporativo  
 
 
-Windows + R = %USERPROFILE%\.gitconfig  des esta forma veo la configuracion 
+Windows + R = %USERPROFILE%\.gitconfig  de esta forma veo la configuracion 
 
 ### A. Ver la Configuración Activa
 

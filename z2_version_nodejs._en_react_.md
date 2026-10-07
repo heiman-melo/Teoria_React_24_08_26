@@ -7,7 +7,7 @@ primero reviso si esxiste este archivo si exitse este me puede decir que version
 } este me indicara que version minima o recomendada que necesito
 
 ## 3. Revizar package.json
-en el moemento de correr el proyecto la consola nos mostrara el error por el cual no corrio
+en el momento de correr el proyecto la consola nos mostrara el error por el cual no corrio
 Si usa Vite (vite):
 
 Vite v3 / v4 / v5 / v6: Requiere mínimo Node 18 o Node 20.

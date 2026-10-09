@@ -76,7 +76,8 @@ export default function Navigation({ onSubtopicSelect }: NavigationProps) { //ts
   const [expandedTopics, setExpandedTopics] = useState<Set<string>>(new Set());
 
   // PATRÓN ESTÁNDAR: useLocation para saber la URL actual
-  // location.pathname SIEMPRE contiene la ruta actual (ej: '/hooks/usestate')
+  // location.pathname SIEMPRE contiene la ruta actual (ej: '/hooks/usestate') en este componente se usa para agregar 
+  // el selected comparando el pathname con la ruta del subtema y asi resaltar el subtema seleccionado en el menu
   const location = useLocation();
 
   // PATRÓN ESTÁNDAR: Handler de evento (función que maneja un evento)
